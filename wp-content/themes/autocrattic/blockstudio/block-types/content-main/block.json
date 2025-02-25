@@ -1,0 +1,563 @@
+{
+    "$schema": "https://app.blockstudio.dev/schema",
+    "apiVersion": 2,
+    "name": "wp2/content-main",
+    "title": "Content Main",
+    "category": "wp2-theme",
+    "icon": "editor-kitchensink",
+    "description": "",
+    "parent": [
+        "core/template-part"
+    ],
+    "attributes": {
+        "className": {
+            "type": "string",
+            "default": ""
+        },
+        "metadata": {
+            "type": "object",
+            "default": {
+                "name": "Main"
+            }
+        },
+        "lock": {
+            "type": "object",
+            "default": {
+                "move": true,
+                "remove": false
+            }
+        },
+        "layout": {
+            "type": "object",
+            "default": {
+                "type": "constrained"
+            }
+        },
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    },
+    "supports": {
+        "className": false,
+        "customClassName": false,
+        "renaming": true,
+        "reusable": false,
+        "lock": true,
+        "html": false,
+        "inserter": false,
+        "multiple": false,
+        "align": [
+            "full"
+        ]
+    },
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "option",
+                "type": "select",
+                "label": "Option",
+                "allowNull": "Select Option",
+                "stylisedUi": true,
+                "options": [
+                    {
+                        "label": "404",
+                        "value": "404",
+                        "innerBlocks": [
+                            {
+                                "name": "core/group",
+                                "attributes": {
+                                    "layout": {
+                                        "type": "constrained"
+                                    },
+                                    "style": {
+                                        "spacing": {
+                                            "padding": {
+                                                "top": "var:preset|spacing|80",
+                                                "bottom": "var:preset|spacing|80"
+                                            }
+                                        }
+                                    }
+                                },
+                                "innerBlocks": [
+                                    {
+                                        "name": "core/columns",
+                                        "attributes": {
+                                            "align": "wide"
+                                        },
+                                        "innerBlocks": [
+                                            {
+                                                "name": "core/column",
+                                                "innerBlocks": [
+                                                    {
+                                                        "name": "core/template-part",
+                                                        "attributes": {
+                                                            "slug": "focus-element-part-404"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "core/column",
+                                                "attributes": {
+                                                    "width": "336px"
+                                                },
+                                                "innerBlocks": [
+                                                    {
+                                                        "name": "core/group",
+                                                        "innerBlocks": [
+                                                            {
+                                                                "name": "core/template-part",
+                                                                "attributes": {
+                                                                    "slug": "focus-sidebar-part-404"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Archive",
+                        "value": "archive",
+                        "innerBlocks": [
+                            {
+                                "name": "core/group",
+                                "attributes": {
+                                    "layout": {
+                                        "type": "constrained"
+                                    },
+                                    "style": {
+                                        "spacing": {
+                                            "padding": {
+                                                "top": "var:preset|spacing|80",
+                                                "bottom": "var:preset|spacing|80"
+                                            }
+                                        }
+                                    }
+                                },
+                                "innerBlocks": [
+                                    {
+                                        "name": "core/columns",
+                                        "attributes": {
+                                            "align": "wide"
+                                        },
+                                        "innerBlocks": [
+                                            {
+                                                "name": "core/column",
+                                                "innerBlocks": [
+                                                    {
+                                                        "name": "core/template-part",
+                                                        "attributes": {
+                                                            "slug": "focus-element-part-archive"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "core/column",
+                                                "attributes": {
+                                                    "width": "336px"
+                                                },
+                                                "innerBlocks": [
+                                                    {
+                                                        "name": "core/group",
+                                                        "innerBlocks": [
+                                                            {
+                                                                "name": "core/template-part",
+                                                                "attributes": {
+                                                                    "slug": "focus-sidebar-part-archive"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Author",
+                        "value": "author",
+                        "innerBlocks": [
+                            {
+                                "name": "core/group",
+                                "attributes": {
+                                    "layout": {
+                                        "type": "constrained"
+                                    },
+                                    "style": {
+                                        "spacing": {
+                                            "padding": {
+                                                "top": "var:preset|spacing|80",
+                                                "bottom": "var:preset|spacing|80"
+                                            }
+                                        }
+                                    }
+                                },
+                                "innerBlocks": [
+                                    {
+                                        "name": "core/columns",
+                                        "attributes": {
+                                            "align": "wide"
+                                        },
+                                        "innerBlocks": [
+                                            {
+                                                "name": "core/column",
+                                                "innerBlocks": [
+                                                    {
+                                                        "name": "core/template-part",
+                                                        "attributes": {
+                                                            "slug": "focus-element-part-author"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "core/column",
+                                                "attributes": {
+                                                    "width": "336px"
+                                                },
+                                                "innerBlocks": [
+                                                    {
+                                                        "name": "core/group",
+                                                        "innerBlocks": [
+                                                            {
+                                                                "name": "core/template-part",
+                                                                "attributes": {
+                                                                    "slug": "focus-sidebar-part-author"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Front Page",
+                        "value": "front-page",
+                        "innerBlocks": [
+                            {
+                                "name": "core/group",
+                                "attributes": {
+                                    "layout": {
+                                        "type": "constrained"
+                                    },
+                                    "style": {
+                                        "spacing": {
+                                            "padding": {
+                                                "top": "var:preset|spacing|80",
+                                                "bottom": "var:preset|spacing|80"
+                                            }
+                                        }
+                                    }
+                                },
+                                "innerBlocks": [
+                                    {
+                                        "name": "core/columns",
+                                        "attributes": {
+                                            "align": "wide"
+                                        },
+                                        "innerBlocks": [
+                                            {
+                                                "name": "core/column",
+                                                "innerBlocks": [
+                                                    {
+                                                        "name": "core/template-part",
+                                                        "attributes": {
+                                                            "slug": "focus-element-part-front-page"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "core/column",
+                                                "attributes": {
+                                                    "width": "336px"
+                                                },
+                                                "innerBlocks": [
+                                                    {
+                                                        "name": "core/group",
+                                                        "innerBlocks": [
+                                                            {
+                                                                "name": "core/template-part",
+                                                                "attributes": {
+                                                                    "slug": "focus-sidebar-part-front-page"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Default",
+                        "value": "index",
+                        "innerBlocks": [
+                            {
+                                "name": "core/group",
+                                "attributes": {
+                                    "layout": {
+                                        "type": "constrained"
+                                    },
+                                    "style": {
+                                        "spacing": {
+                                            "padding": {
+                                                "top": "var:preset|spacing|80",
+                                                "bottom": "var:preset|spacing|80"
+                                            }
+                                        }
+                                    }
+                                },
+                                "innerBlocks": [
+                                    {
+                                        "name": "core/columns",
+                                        "attributes": {
+                                            "align": "wide"
+                                        },
+                                        "innerBlocks": [
+                                            {
+                                                "name": "core/column",
+                                                "innerBlocks": [
+                                                    {
+                                                        "name": "core/template-part",
+                                                        "attributes": {
+                                                            "slug": "focus-element-part-index"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "core/column",
+                                                "attributes": {
+                                                    "width": "336px"
+                                                },
+                                                "innerBlocks": [
+                                                    {
+                                                        "name": "core/group",
+                                                        "innerBlocks": [
+                                                            {
+                                                                "name": "core/template-part",
+                                                                "attributes": {
+                                                                    "slug": "focus-sidebar-part-index"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Page",
+                        "value": "page",
+                        "innerBlocks": [
+                            {
+                                "name": "core/group",
+                                "attributes": {
+                                    "layout": {
+                                        "type": "constrained"
+                                    },
+                                    "style": {
+                                        "spacing": {
+                                            "padding": {
+                                                "top": "var:preset|spacing|80",
+                                                "bottom": "var:preset|spacing|80"
+                                            }
+                                        }
+                                    }
+                                },
+                                "innerBlocks": [
+                                    {
+                                        "name": "core/columns",
+                                        "attributes": {
+                                            "align": "wide"
+                                        },
+                                        "innerBlocks": [
+                                            {
+                                                "name": "core/column",
+                                                "innerBlocks": [
+                                                    {
+                                                        "name": "core/template-part",
+                                                        "attributes": {
+                                                            "slug": "focus-element-part-page"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "core/column",
+                                                "attributes": {
+                                                    "width": "336px"
+                                                },
+                                                "innerBlocks": [
+                                                    {
+                                                        "name": "core/group",
+                                                        "innerBlocks": [
+                                                            {
+                                                                "name": "core/template-part",
+                                                                "attributes": {
+                                                                    "slug": "focus-sidebar-part-page"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Search",
+                        "value": "search",
+                        "innerBlocks": [
+                            {
+                                "name": "core/group",
+                                "attributes": {
+                                    "layout": {
+                                        "type": "constrained"
+                                    },
+                                    "style": {
+                                        "spacing": {
+                                            "padding": {
+                                                "top": "var:preset|spacing|80",
+                                                "bottom": "var:preset|spacing|80"
+                                            }
+                                        }
+                                    }
+                                },
+                                "innerBlocks": [
+                                    {
+                                        "name": "core/columns",
+                                        "attributes": {
+                                            "align": "wide"
+                                        },
+                                        "innerBlocks": [
+                                            {
+                                                "name": "core/column",
+                                                "innerBlocks": [
+                                                    {
+                                                        "name": "core/template-part",
+                                                        "attributes": {
+                                                            "slug": "focus-element-part-search"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "core/column",
+                                                "attributes": {
+                                                    "width": "336px"
+                                                },
+                                                "innerBlocks": [
+                                                    {
+                                                        "name": "core/group",
+                                                        "innerBlocks": [
+                                                            {
+                                                                "name": "core/template-part",
+                                                                "attributes": {
+                                                                    "slug": "focus-sidebar-part-search"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Single",
+                        "value": "single",
+                        "innerBlocks": [
+                            {
+                                "name": "core/group",
+                                "attributes": {
+                                    "layout": {
+                                        "type": "constrained"
+                                    },
+                                    "style": {
+                                        "spacing": {
+                                            "padding": {
+                                                "top": "var:preset|spacing|80",
+                                                "bottom": "var:preset|spacing|80"
+                                            }
+                                        }
+                                    }
+                                },
+                                "innerBlocks": [
+                                    {
+                                        "name": "core/columns",
+                                        "attributes": {
+                                            "align": "wide"
+                                        },
+                                        "innerBlocks": [
+                                            {
+                                                "name": "core/column",
+                                                "innerBlocks": [
+                                                    {
+                                                        "name": "core/template-part",
+                                                        "attributes": {
+                                                            "slug": "focus-element-part-single"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "core/column",
+                                                "attributes": {
+                                                    "width": "336px"
+                                                },
+                                                "innerBlocks": [
+                                                    {
+                                                        "name": "core/group",
+                                                        "innerBlocks": [
+                                                            {
+                                                                "name": "core/template-part",
+                                                                "attributes": {
+                                                                    "slug": "focus-sidebar-part-single"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

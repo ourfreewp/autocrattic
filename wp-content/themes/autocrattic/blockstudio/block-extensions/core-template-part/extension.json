@@ -1,0 +1,183 @@
+{
+    "$schema": "https://app.blockstudio.dev/schema/extend",
+    "name": "core/template-part",
+    "title": "Edit Canvas",
+    "priority": 10,
+    "attributes": {
+        "lock": {
+            "type": "object",
+            "default": {
+                "move": true,
+                "remove": false
+            }
+        }
+    },
+    "blockstudio": {
+        "extend": true,
+        "attributes": [
+            {
+                "label": "Option",
+                "allowNull": "Select Part",
+                "id": "option",
+                "type": "select",
+                "stylisedUi": true,
+                "options": [
+                    {
+                        "label": "Layout Header",
+                        "value": "layout-header",
+                        "innerBlocks": [
+                            {
+                                "name": "wp2/layout-header",
+                                "attributes": {
+                                    "metadata": {
+                                        "name": "Layout Header"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Layout Main",
+                        "value": "layout-main",
+                        "innerBlocks": [
+                            {
+                                "name": "wp2/layout-main",
+                                "attributes": {
+                                    "metadata": {
+                                        "name": "Layout Main"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Layout Footer",
+                        "value": "layout-footer",
+                        "innerBlocks": [
+                            {
+                                "name": "wp2/layout-footer",
+                                "attributes": {
+                                    "metadata": {
+                                        "name": "Layout Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Content Header",
+                        "value": "content-header",
+                        "innerBlocks": [
+                            {
+                                "name": "wp2/content-header",
+                                "attributes": {
+                                    "metadata": {
+                                        "name": "Content Header"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Content Main",
+                        "value": "content-main",
+                        "innerBlocks": [
+                            {
+                                "name": "wp2/content-main",
+                                "attributes": {
+                                    "metadata": {
+                                        "name": "Content Main"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Content Footer",
+                        "value": "content-footer",
+                        "innerBlocks": [
+                            {
+                                "name": "wp2/content-footer",
+                                "attributes": {
+                                    "metadata": {
+                                        "name": "Content Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Focus Element",
+                        "value": "focus-element",
+                        "innerBlocks": [
+                            {
+                                "name": "wp2/focus-element",
+                                "attributes": {
+                                    "metadata": {
+                                        "name": "Focus Element"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Focus Header",
+                        "value": "focus-header",
+                        "innerBlocks": [
+                            {
+                                "name": "wp2/focus-header",
+                                "attributes": {
+                                    "metadata": {
+                                        "name": "Element Header"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Focus Main",
+                        "value": "focus-main",
+                        "innerBlocks": [
+                            {
+                                "name": "wp2/focus-main",
+                                "attributes": {
+                                    "metadata": {
+                                        "name": "Element Main"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Focus Footer",
+                        "value": "focus-footer",
+                        "innerBlocks": [
+                            {
+                                "name": "wp2/focus-footer",
+                                "attributes": {
+                                    "metadata": {
+                                        "name": "Element Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Focus Sidebar",
+                        "value": "focus-sidebar",
+                        "innerBlocks": [
+                            {
+                                "name": "wp2/focus-sidebar",
+                                "attributes": {
+                                    "metadata": {
+                                        "name": "Focus Sidebar"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
