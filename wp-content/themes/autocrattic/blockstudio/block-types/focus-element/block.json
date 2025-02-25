@@ -1,0 +1,331 @@
+{
+    "$schema": "https://app.blockstudio.dev/schema",
+    "apiVersion": 2,
+    "name": "wp2/focus-element",
+    "title": "Focus Element",
+    "category": "wp2-theme",
+    "icon": "editor-kitchensink",
+    "description": "",
+    "parent": [
+        "core/template-part"
+    ],
+    "attributes": {
+        "className": {
+            "type": "string",
+            "default": ""
+        },
+        "metadata": {
+            "type": "object",
+            "default": {
+                "name": "Element"
+            }
+        },
+        "lock": {
+            "type": "object",
+            "default": {
+                "move": true,
+                "remove": false
+            }
+        },
+        "layout": {
+            "type": "object",
+            "default": {
+                "type": "constrained"
+            }
+        },
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    },
+    "supports": {
+        "className": false,
+        "customClassName": false,
+        "renaming": true,
+        "reusable": false,
+        "lock": true,
+        "html": false,
+        "inserter": false,
+        "multiple": false,
+        "align": [
+            "full"
+        ]
+    },
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "option",
+                "type": "select",
+                "label": "Option",
+                "allowNull": "Select Option",
+                "stylisedUi": true,
+                "options": [
+                    {
+                        "label": "404",
+                        "value": "404",
+                        "innerBlocks": [
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-header-part-404",
+                                    "metadata": {
+                                        "name": "404 Header"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-main-part-404",
+                                    "metadata": {
+                                        "name": "404 Main"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-footer-part-404",
+                                    "metadata": {
+                                        "name": "404 Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Archive",
+                        "value": "archive",
+                        "innerBlocks": [
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-header-part-archive",
+                                    "metadata": {
+                                        "name": "Archive Header"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-main-part-archive",
+                                    "metadata": {
+                                        "name": "Archive Main"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-footer-part-archive",
+                                    "metadata": {
+                                        "name": "Archive Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Author",
+                        "value": "author",
+                        "innerBlocks": [
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-header-part-author",
+                                    "metadata": {
+                                        "name": "Author Header"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-main-part-author",
+                                    "metadata": {
+                                        "name": "Author Main"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-footer-part-author",
+                                    "metadata": {
+                                        "name": "Author Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Front Page",
+                        "value": "front-page",
+                        "innerBlocks": [
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-header-part-front-page",
+                                    "metadata": {
+                                        "name": "Front Page Header"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-main-part-front-page",
+                                    "metadata": {
+                                        "name": "Front Page Main"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-footer-part-front-page",
+                                    "metadata": {
+                                        "name": "Front Page Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Default",
+                        "value": "index",
+                        "innerBlocks": [
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-header-part-index",
+                                    "metadata": {
+                                        "name": "Index Header"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-main-part-index",
+                                    "metadata": {
+                                        "name": "Index Main"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-footer-part-index",
+                                    "metadata": {
+                                        "name": "Index Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Page",
+                        "value": "page",
+                        "innerBlocks": [
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-header-part-page",
+                                    "metadata": {
+                                        "name": "Page Header"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-main-part-page",
+                                    "metadata": {
+                                        "name": "Page Main"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-footer-part-page",
+                                    "metadata": {
+                                        "name": "Page Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Search",
+                        "value": "search",
+                        "innerBlocks": [
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-header-part-search",
+                                    "metadata": {
+                                        "name": "Search Header"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-main-part-search",
+                                    "metadata": {
+                                        "name": "Search Main"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-footer-part-search",
+                                    "metadata": {
+                                        "name": "Search Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Single",
+                        "value": "single",
+                        "innerBlocks": [
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-header-part-single",
+                                    "metadata": {
+                                        "name": "Single Header"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-main-part-single",
+                                    "metadata": {
+                                        "name": "Single Main"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "focus-footer-part-single",
+                                    "metadata": {
+                                        "name": "Single Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,76 @@
+{
+    "$schema": "https://app.blockstudio.dev/schema",
+    "apiVersion": 2,
+    "name": "wp2/layout-footer",
+    "title": "Layout Footer",
+    "category": "wp2-theme",
+    "icon": "table-row-after",
+    "description": "",
+    "parent": [
+        "core/template-part"
+    ],
+    "attributes": {
+        "className": {
+            "type": "string",
+            "default": ""
+        },
+        "metadata": {
+            "type": "object",
+            "default": {
+                "name": "Footer"
+            }
+        },
+        "lock": {
+            "type": "object",
+            "default": {
+                "move": true,
+                "remove": false
+            }
+        },
+        "layout": {
+            "type": "object",
+            "default": {
+                "type": "constrained"
+            }
+        },
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    },
+    "supports": {
+        "className": false,
+        "customClassName": false,
+        "renaming": true,
+        "reusable": false,
+        "lock": true,
+        "html": false,
+        "inserter": false,
+        "multiple": false,
+        "align": [
+            "full"
+        ]
+    },
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "option",
+                "type": "select",
+                "label": "Option",
+                "allowNull": "Select Option",
+                "stylisedUi": true,
+                "options": [
+                    {
+                        "label": "Default",
+                        "value": "0",
+                        "innerBlocks": [
+                            {
+                                "name": "a11c/site-footer"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

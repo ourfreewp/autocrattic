@@ -1,0 +1,181 @@
+{
+    "$schema": "https://app.blockstudio.dev/schema",
+    "apiVersion": 2,
+    "name": "a11c/navbar",
+    "title": "Navbar",
+    "category": "wp2-theme",
+    "icon": "screenoptions",
+    "description": "",
+    "ancestor": [
+        "wp2/layout-header"
+    ],
+    "attributes": {
+        "metadata": {
+            "type": "object",
+            "default": {
+                "name": "Navbar"
+            }
+        },
+        "lock": {
+            "type": "object",
+            "default": {
+                "move": true,
+                "remove": false
+            }
+        },
+        "layout": {
+            "type": "object",
+            "default": {
+                "type": "constrained"
+            }
+        },
+        "align": {
+            "type": "string",
+            "default": "wide"
+        },
+        "style": {
+            "type": "object",
+            "default": {
+                "border": {
+                    "bottom": {
+                        "color": "var:preset|color|cyan-bluish-gray",
+                        "width": "1px"
+                    },
+                    "top": {},
+                    "right": {},
+                    "left": {}
+                }
+            }
+        }
+    },
+    "supports": {
+        "className": false,
+        "customClassName": false,
+        "renaming": true,
+        "reusable": false,
+        "lock": true,
+        "html": false,
+        "inserter": false,
+        "multiple": false,
+        "align": [
+            "full",
+            "wide"
+        ],
+        "layout": true,
+        "__experimentalBorder": {
+            "color": true,
+            "radius": true,
+            "style": true,
+            "width": true
+        }
+    },
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "option",
+                "type": "select",
+                "label": "Option",
+                "allowNull": "Select Option",
+                "stylisedUi": true,
+                "options": [
+                    {
+                        "label": "Default",
+                        "value": "0",
+                        "innerBlocks": [
+                            {
+                                "name": "core/group",
+                                "attributes": {
+                                    "metadata": {
+                                        "name": "Container"
+                                    },
+                                    "align": "wide",
+                                    "style": {
+                                        "spacing": {
+                                            "padding": {
+                                                "top": "1rem",
+                                                "bottom": "1rem"
+                                            }
+                                        }
+                                    },
+                                    "layout": {
+                                        "type": "flex",
+                                        "flexWrap": "nowrap",
+                                        "justifyContent": "space-between",
+                                        "orientation": "horizontal"
+                                    }
+                                },
+                                "innerBlocks": [
+                                    {
+                                        "name": "core/group",
+                                        "attributes": {
+                                            "metadata": {
+                                                "name": "Brand Side"
+                                            },
+                                            "layout": {
+                                                "type": "flex",
+                                                "flexWrap": "nowrap",
+                                                "justifyContent": "space-between",
+                                                "orientation": "horizontal"
+                                            },
+                                            "align": "full"
+                                        },
+                                        "innerBlocks": [
+                                            {
+                                                "name": "core/site-title",
+                                                "attributes": {
+                                                    "metadata": {
+                                                        "name": "Site Title"
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "name": "core/navigation",
+                                                "attributes": {
+                                                    "ref": 37,
+                                                    "overlayMenu": "never",
+                                                    "metadata": {
+                                                        "name": "Navigation"
+                                                    },
+                                                    "layout": {
+                                                        "type": "flex",
+                                                        "flexWrap": "nowrap"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "core/group",
+                                        "attributes": {
+                                            "metadata": {
+                                                "name": "Menu Side"
+                                            },
+                                            "layout": {
+                                                "type": "flex",
+                                                "flexWrap": "nowrap",
+                                                "justifyContent": "space-between",
+                                                "orientation": "horizontal"
+                                            },
+                                            "align": "full"
+                                        },
+                                        "innerBlocks": [
+                                            {
+                                                "name": "core/navigation",
+                                                "attributes": {
+                                                    "ref": 4,
+                                                    "metadata": {
+                                                        "name": "Main Menu"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

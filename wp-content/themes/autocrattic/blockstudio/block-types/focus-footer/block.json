@@ -1,0 +1,213 @@
+{
+    "$schema": "https://app.blockstudio.dev/schema",
+    "apiVersion": 2,
+    "name": "wp2/focus-footer",
+    "title": "Focus Footer",
+    "category": "wp2-theme",
+    "icon": "editor-kitchensink",
+    "description": "",
+    "parent": [
+        "core/template-part"
+    ],
+    "attributes": {
+        "className": {
+            "type": "string",
+            "default": ""
+        },
+        "metadata": {
+            "type": "object",
+            "default": {
+                "name": "Footer"
+            }
+        },
+        "lock": {
+            "type": "object",
+            "default": {
+                "move": true,
+                "remove": false
+            }
+        },
+        "layout": {
+            "type": "object",
+            "default": {
+                "type": "constrained"
+            }
+        },
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    },
+    "supports": {
+        "className": false,
+        "customClassName": false,
+        "renaming": true,
+        "reusable": false,
+        "lock": true,
+        "html": false,
+        "inserter": false,
+        "multiple": false,
+        "align": [
+            "full"
+        ]
+    },
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "option",
+                "type": "select",
+                "label": "Option",
+                "allowNull": "Select Option",
+                "stylisedUi": true,
+                "options": [
+                    {
+                        "label": "404",
+                        "value": "404",
+                        "innerBlocks": [
+                            {
+                                "name": "core/group",
+                                "attributes": {
+                                    "layout": {
+                                        "type": "constrained"
+                                    }
+                                },
+                                "innerBlocks": []
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Archive",
+                        "value": "archive",
+                        "innerBlocks": [
+                            {
+                                "name": "core/group",
+                                "attributes": {
+                                    "layout": {
+                                        "type": "constrained"
+                                    }
+                                },
+                                "innerBlocks": []
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Author",
+                        "value": "author",
+                        "innerBlocks": [
+                            {
+                                "name": "core/group",
+                                "attributes": {
+                                    "layout": {
+                                        "type": "constrained"
+                                    }
+                                },
+                                "innerBlocks": []
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Front Page",
+                        "value": "front-page",
+                        "innerBlocks": [
+                            {
+                                "name": "core/group",
+                                "attributes": {
+                                    "layout": {
+                                        "type": "constrained"
+                                    }
+                                },
+                                "innerBlocks": []
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Default",
+                        "value": "index",
+                        "innerBlocks": [
+                            {
+                                "name": "core/group",
+                                "attributes": {
+                                    "layout": {
+                                        "type": "constrained"
+                                    }
+                                },
+                                "innerBlocks": []
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Page",
+                        "value": "page",
+                        "innerBlocks": [
+                            {
+                                "name": "core/group",
+                                "attributes": {
+                                    "layout": {
+                                        "type": "constrained"
+                                    }
+                                },
+                                "innerBlocks": [
+                                    {
+                                        "name": "core/post-terms",
+                                        "attributes": {
+                                            "term": "category"
+                                        }
+                                    },
+                                    {
+                                        "name": "core/post-terms",
+                                        "attributes": {
+                                            "term": "post_tag"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Search",
+                        "value": "search",
+                        "innerBlocks": [
+                            {
+                                "name": "core/group",
+                                "attributes": {
+                                    "layout": {
+                                        "type": "constrained"
+                                    }
+                                },
+                                "innerBlocks": []
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Single",
+                        "value": "single",
+                        "innerBlocks": [
+                            {
+                                "name": "core/group",
+                                "attributes": {
+                                    "layout": {
+                                        "type": "constrained"
+                                    }
+                                },
+                                "innerBlocks": [
+                                    {
+                                        "name": "core/post-terms",
+                                        "attributes": {
+                                            "term": "category"
+                                        }
+                                    },
+                                    {
+                                        "name": "core/post-terms",
+                                        "attributes": {
+                                            "term": "post_tag"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

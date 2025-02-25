@@ -1,0 +1,357 @@
+{
+    "$schema": "https://app.blockstudio.dev/schema",
+    "apiVersion": 2,
+    "name": "wp2/root-layout",
+    "title": "Layout",
+    "category": "wp2-theme",
+    "icon": "layout",
+    "description": "",
+    "supports": {
+        "className": false,
+        "customClassName": false,
+        "renaming": true,
+        "reusable": false,
+        "multiple": false,
+        "lock": true,
+        "html": false,
+        "inserter": true
+    },
+    "attributes": {
+        "className": {
+            "type": "string",
+            "default": "wp2-root"
+        },
+        "metadata": {
+            "type": "object",
+            "default": {
+                "name": "Root Layout — Default"
+            }
+        },
+        "templateLock": {
+            "type": "string",
+            "default": "all"
+        },
+        "lock": {
+            "type": "object",
+            "default": {
+                "move": true,
+                "remove": true
+            }
+        },
+        "layout": {
+            "type": "object",
+            "default": {
+                "type": "flex",
+                "alignItems": "stretch",
+                "flexWrap": "nowrap",
+                "justifyContent": "stretch",
+                "verticalAlignment": "space-between",
+                "orientation": "vertical",
+                "flexDirection": "column"
+            }
+        },
+        "style": {
+            "type": "object",
+            "default": {
+                "dimensions": {
+                    "minHeight": "100vh"
+                },
+                "spacing": {
+                    "padding": {
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0"
+                    },
+                    "margin": {
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0"
+                    },
+                    "blockGap": "0"
+                }
+            }
+        }
+    },
+    "allowedBlocks": [
+        "core/template-part"
+    ],
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "option",
+                "type": "select",
+                "label": "Layout",
+                "allowNull": "Select Layout",
+                "stylisedUi": true,
+                "options": [
+                    {
+                        "label": "404",
+                        "value": "404",
+                        "innerBlocks": [
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-header-part-404",
+                                    "metadata": {
+                                        "name": "404 Header"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-main-part-404",
+                                    "metadata": {
+                                        "name": "404 Main"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-footer-part-404",
+                                    "metadata": {
+                                        "name": "404 Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Archive",
+                        "value": "archive",
+                        "innerBlocks": [
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-header-part-archive",
+                                    "metadata": {
+                                        "name": "Archive Header"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-main-part-archive",
+                                    "metadata": {
+                                        "name": "Archive Main"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-footer-part-archive",
+                                    "metadata": {
+                                        "name": "Archive Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Author",
+                        "value": "author",
+                        "innerBlocks": [
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-header-part-author",
+                                    "metadata": {
+                                        "name": "Author Header"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-main-part-author",
+                                    "metadata": {
+                                        "name": "Author Main"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-footer-part-author",
+                                    "metadata": {
+                                        "name": "Author Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Front Page",
+                        "value": "front-page",
+                        "innerBlocks": [
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-header-part-front-page",
+                                    "metadata": {
+                                        "name": "Front Page Header"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-main-part-front-page",
+                                    "metadata": {
+                                        "name": "Front Page Main"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-footer-part-front-page",
+                                    "metadata": {
+                                        "name": "Front Page Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Default",
+                        "value": "index",
+                        "innerBlocks": [
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-header-part-index",
+                                    "metadata": {
+                                        "name": "Index Header"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-main-part-index",
+                                    "metadata": {
+                                        "name": "Index Main"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-footer-part-index",
+                                    "metadata": {
+                                        "name": "Index Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Page",
+                        "value": "page",
+                        "innerBlocks": [
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-header-part-page",
+                                    "metadata": {
+                                        "name": "Page Header"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-main-part-page",
+                                    "metadata": {
+                                        "name": "Page Main"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-footer-part-page",
+                                    "metadata": {
+                                        "name": "Page Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Search",
+                        "value": "search",
+                        "innerBlocks": [
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-header-part-search",
+                                    "metadata": {
+                                        "name": "Search Header"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-main-part-search",
+                                    "metadata": {
+                                        "name": "Search Main"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-footer-part-search",
+                                    "metadata": {
+                                        "name": "Search Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Single",
+                        "value": "single",
+                        "innerBlocks": [
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-header-part-single",
+                                    "metadata": {
+                                        "name": "Single Header"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-main-part-single",
+                                    "metadata": {
+                                        "name": "Single Main"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "core/template-part",
+                                "attributes": {
+                                    "slug": "layout-footer-part-single",
+                                    "metadata": {
+                                        "name": "Single Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,259 @@
+{
+    "$schema": "https://app.blockstudio.dev/schema",
+    "apiVersion": 2,
+    "name": "a11c/site-footer",
+    "title": "Site Footer",
+    "category": "wp2-theme",
+    "icon": "screenoptions",
+    "description": "",
+    "ancestor": [
+        "wp2/layout-footer"
+    ],
+    "attributes": {
+        "metadata": {
+            "type": "object",
+            "default": {
+                "name": "Site Footer"
+            }
+        },
+        "lock": {
+            "type": "object",
+            "default": {
+                "move": true,
+                "remove": false
+            }
+        },
+        "layout": {
+            "type": "object",
+            "default": {
+                "type": "constrained"
+            }
+        },
+        "align": {
+            "type": "string",
+            "default": "wide"
+        },
+        "style": {
+            "type": "object",
+            "default": {
+                "border": {
+                    "bottom": {},
+                    "top": {
+                        "color": "var:preset|color|cyan-bluish-gray",
+                        "width": "1px"
+                    },
+                    "right": {},
+                    "left": {}
+                }
+            }
+        }
+    },
+    "supports": {
+        "className": false,
+        "customClassName": false,
+        "renaming": true,
+        "reusable": false,
+        "lock": true,
+        "html": false,
+        "inserter": false,
+        "multiple": false,
+        "align": [
+            "full",
+            "wide"
+        ],
+        "layout": true,
+        "__experimentalBorder": {
+            "color": true,
+            "radius": true,
+            "style": true,
+            "width": true
+        }
+    },
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "option",
+                "type": "select",
+                "label": "Option",
+                "allowNull": "Select Option",
+                "stylisedUi": true,
+                "options": [
+                    {
+                        "label": "Default",
+                        "value": "0",
+                        "innerBlocks": [
+                            {
+                                "name": "core/group",
+                                "attributes": {
+                                    "metadata": {
+                                        "name": "Default"
+                                    },
+                                    "align": "full",
+                                    "style": {
+                                        "spacing": {
+                                            "padding": {
+                                                "top": "3rem",
+                                                "bottom": "3rem",
+                                                "left": "1rem",
+                                                "right": "1rem"
+                                            },
+                                            "blockGap": "3rem"
+                                        },
+                                        "border": {
+                                            "top": {
+                                                "color": "var:preset|color|cyan-bluish-gray",
+                                                "width": "1px"
+                                            }
+                                        }
+                                    },
+                                    "layout": {
+                                        "type": "constrained",
+                                        "contentSize": ""
+                                    }
+                                },
+                                "innerBlocks": [
+                                    {
+                                        "name": "core/columns",
+                                        "attributes": {
+                                            "align": "wide",
+                                            "verticalAlignment": "center"
+                                        },
+                                        "innerBlocks": [
+                                            {
+                                                "name": "core/column",
+                                                "attributes": {
+                                                    "verticalAlignment": "center"
+                                                },
+                                                "innerBlocks": [
+                                                    {
+                                                        "name": "core/group",
+                                                        "attributes": {
+                                                            "layout": {
+                                                                "type": "constrained",
+                                                                "contentSize": "270px",
+                                                                "justifyContent": "left"
+                                                            }
+                                                        },
+                                                        "innerBlocks": [
+                                                            {
+                                                                "name": "core/group",
+                                                                "attributes": {
+                                                                    "style": {
+                                                                        "background": {
+                                                                            "backgroundImage": {
+                                                                                "url": "https://www.autocrattic.com/wp-content/uploads/2025/02/freewp-brand-logo.png",
+                                                                                "id": 54,
+                                                                                "source": "file",
+                                                                                "title": "freewp-brand-logo"
+                                                                            },
+                                                                            "backgroundSize": "contain",
+                                                                            "backgroundRepeat": "no-repeat",
+                                                                            "backgroundAttachment": "scroll",
+                                                                            "backgroundPosition": "0% 50%"
+                                                                        },
+                                                                        "spacing": {
+                                                                            "padding": {
+                                                                                "top": "var:preset|spacing|20",
+                                                                                "bottom": "var:preset|spacing|20"
+                                                                            },
+                                                                            "margin": {
+                                                                                "top": "var:preset|spacing|30",
+                                                                                "bottom": "var:preset|spacing|30"
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    "layout": {
+                                                                        "type": "flex",
+                                                                        "orientation": "vertical",
+                                                                        "flexWrap": "nowrap",
+                                                                        "justifyContent": "stretch"
+                                                                    }
+                                                                },
+                                                                "innerBlocks": [
+                                                                    {
+                                                                        "name": "core/spacer",
+                                                                        "attributes": {
+                                                                            "height": "0px",
+                                                                            "style": {
+                                                                                "layout": {
+                                                                                    "flexSize": "100px",
+                                                                                    "selfStretch": "fixed"
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "core/column",
+                                                "attributes": {
+                                                    "verticalAlignment": "center"
+                                                },
+                                                "innerBlocks": [
+                                                    {
+                                                        "name": "core/group",
+                                                        "innerBlocks": [
+                                                            {
+                                                                "name": "core/paragraph",
+                                                                "attributes": {
+                                                                    "align": "left",
+                                                                    "style": {
+                                                                        "typography": {
+                                                                            "fontSize": "1.4rem"
+                                                                        }
+                                                                    },
+                                                                    "content": "Preserving and protecting the freedom to use, study, copy, modify, and distribute WordPress."
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "core/group",
+                                        "attributes": {
+                                            "align": "wide",
+                                            "style": {
+                                                "spacing": {
+                                                    "padding": {
+                                                        "top": "2rem",
+                                                        "bottom": "2rem"
+                                                    },
+                                                    "blockGap": "3rem"
+                                                },
+                                                "border": {
+                                                    "top": {
+                                                        "color": "var:preset|color|cyan-bluish-gray",
+                                                        "width": "1px"
+                                                    }
+                                                }
+                                            },
+                                            "layout": {
+                                                "type": "default"
+                                            }
+                                        },
+                                        "innerBlocks": [
+                                            {
+                                                "name": "core/navigation",
+                                                "attributes": {
+                                                    "ref": 55,
+                                                    "overlayMenu": "never"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
